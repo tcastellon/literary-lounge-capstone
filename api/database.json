@@ -1,0 +1,170 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "creatorId": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic Fiction",
+      "image": "https://example.com/images/great-gatsby.jpg",
+      "description": "A tragic tale of love and wealth in the Jazz Age."
+    },
+    {
+      "id": 2,
+      "creatorId": 2,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Classic Fiction",
+      "image": "https://example.com/images/mockingbird.jpg",
+      "description": "A young girl's perspective on justice and morality in the American South."
+    },
+    {
+      "id": 3,
+      "creatorId": 3,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "image": "https://example.com/images/dune.jpg",
+      "description": "Epic space opera about power, religion, and ecology on a desert planet."
+    },
+    {
+      "id": 4,
+      "creatorId": 1,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "image": "https://example.com/images/hobbit.jpg",
+      "description": "A hobbit's unexpected journey to reclaim a treasure from a dragon."
+    },
+    {
+      "id": 5,
+      "creatorId": 4,
+      "title": "Gone Girl",
+      "author": "Gillian Flynn",
+      "genre": "Mystery",
+      "image": "https://example.com/images/gone-girl.jpg",
+      "description": "A psychological thriller about a marriage gone terribly wrong."
+    },
+    {
+      "id": 6,
+      "creatorId": 2,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "image": "https://example.com/images/pride-prejudice.jpg",
+      "description": "A witty tale of love, class, and first impressions in Regency England."
+    }
+  ],
+  "readers": [
+    {
+      "id": 1,
+      "name": "Emma Johnson",
+      "email": "bookworm.emma@gmail.com",
+      "narrative": "I'm a high school English teacher who loves classic literature and fantasy novels. I enjoy discovering timeless stories that I can share with my students and often host a monthly book club at my local library."
+    },
+    {
+      "id": 2,
+      "name": "Marcus Chen",
+      "email": "codeandread@outlook.com",
+      "narrative": "I'm a software developer with a passion for both classic fiction and contemporary thrillers. I read during my commute and love books that make me think deeply about human nature and society."
+    },
+    {
+      "id": 3,
+      "name": "Sarah Rodriguez",
+      "email": "starreader23@yahoo.com",
+      "narrative": "I'm a college student majoring in astrophysics who has a deep love for science fiction and fantasy. I appreciate stories that explore complex world-building and scientific concepts while still delivering compelling characters."
+    },
+    {
+      "id": 4,
+      "name": "David Kim",
+      "email": "mysterysolver67@gmail.com",
+      "narrative": "I'm a retired detective who now enjoys reading mystery and crime novels. I like trying to solve the puzzles before the characters do and appreciate well-crafted psychological thrillers."
+    },
+    {
+      "id": 5,
+      "name": "Lisa Thompson",
+      "email": "happyendings.lisa@hotmail.com",
+      "narrative": "I'm a marketing manager and busy mom who loves romance novels and feel-good fiction. I read as a way to unwind after long days and enjoy stories with happy endings and strong character development."
+    }
+  ],
+  "booksRead": [
+    {
+      "id": 1,
+      "readerId": 1,
+      "bookId": 1,
+      "read": true
+    },
+    {
+      "id": 2,
+      "readerId": 1,
+      "bookId": 4,
+      "read": true
+    },
+    {
+      "id": 3,
+      "readerId": 1,
+      "bookId": 2,
+      "read": false
+    },
+    {
+      "id": 4,
+      "readerId": 2,
+      "bookId": 1,
+      "read": true
+    },
+    {
+      "id": 5,
+      "readerId": 2,
+      "bookId": 2,
+      "read": true
+    },
+    {
+      "id": 6,
+      "readerId": 2,
+      "bookId": 6,
+      "read": false
+    },
+    {
+      "id": 7,
+      "readerId": 3,
+      "bookId": 3,
+      "read": true
+    },
+    {
+      "id": 8,
+      "readerId": 3,
+      "bookId": 4,
+      "read": true
+    },
+    {
+      "id": 9,
+      "readerId": 3,
+      "bookId": 1,
+      "read": false
+    },
+    {
+      "id": 10,
+      "readerId": 4,
+      "bookId": 5,
+      "read": true
+    },
+    {
+      "id": 11,
+      "readerId": 4,
+      "bookId": 2,
+      "read": false
+    },
+    {
+      "id": 12,
+      "readerId": 5,
+      "bookId": 6,
+      "read": true
+    },
+    {
+      "id": 13,
+      "readerId": 5,
+      "bookId": 1,
+      "read": false
+    }
+  ]
+}
