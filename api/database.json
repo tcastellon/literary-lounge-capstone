@@ -6,7 +6,7 @@
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "genre": "Classic Fiction",
-      "image": "https://example.com/images/great-gatsby.jpg",
+      "image": "https://www.hachettebookgroup.com/wp-content/uploads/2020/06/9780762498130-3.jpg?w=488",
       "description": "A tragic tale of love and wealth in the Jazz Age."
     },
     {
@@ -15,7 +15,7 @@
       "title": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "genre": "Classic Fiction",
-      "image": "https://example.com/images/mockingbird.jpg",
+      "image": "https://m.media-amazon.com/images/I/71HZbA0WscL._UF1000,1000_QL80_.jpg",
       "description": "A young girl's perspective on justice and morality in the American South."
     },
     {
@@ -24,7 +24,7 @@
       "title": "Dune",
       "author": "Frank Herbert",
       "genre": "Science Fiction",
-      "image": "https://example.com/images/dune.jpg",
+      "image": "https://m.media-amazon.com/images/I/81Ua99CURsL._UF1000,1000_QL80_.jpg",
       "description": "Epic space opera about power, religion, and ecology on a desert planet."
     },
     {
@@ -33,7 +33,7 @@
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "genre": "Fantasy",
-      "image": "https://example.com/images/hobbit.jpg",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1546071216i/5907.jpg",
       "description": "A hobbit's unexpected journey to reclaim a treasure from a dragon."
     },
     {
@@ -42,7 +42,7 @@
       "title": "Gone Girl",
       "author": "Gillian Flynn",
       "genre": "Mystery",
-      "image": "https://example.com/images/gone-girl.jpg",
+      "image": "https://m.media-amazon.com/images/I/713e4Yk6brL._UF1000,1000_QL80_.jpg",
       "description": "A psychological thriller about a marriage gone terribly wrong."
     },
     {
@@ -51,7 +51,7 @@
       "title": "Pride and Prejudice",
       "author": "Jane Austen",
       "genre": "Romance",
-      "image": "https://example.com/images/pride-prejudice.jpg",
+      "image": "https://m.media-amazon.com/images/I/712P0p5cXIL._UF1000,1000_QL80_.jpg",
       "description": "A witty tale of love, class, and first impressions in Regency England."
     }
   ],
