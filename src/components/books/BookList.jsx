@@ -15,7 +15,7 @@ export const BookList = () => {
         <div>
           <h2>Books</h2>
           <ul>{bookList.map((book) => {
-            return <li>{book.title}:
+            return <li key={book.id}>{book.title}:
             <span> {book.description}</span></li>
           })}
           </ul>
