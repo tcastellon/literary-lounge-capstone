@@ -17,8 +17,8 @@ export const BookDetails = () => {
   const { bookId } = useParams()
 
   useEffect(() => {
-    getBooksById(bookId).then((data) => {
-      setBook(data)
+    getBooksById(bookId).then((bookObj) => {
+      setBook(bookObj)
     })
   
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,7 +27,7 @@ export const BookDetails = () => {
   return (
     <>
     <div>
-      <header>{book?.title}</header>
+      <header>{book.title}</header>
       <div>{book.author}</div>
       <div>{book.genre}</div>
       <img src={book.image} alt={book.title}/>
