@@ -27,7 +27,7 @@ export const BookDetails = () => {
   return (
     <>
     <div>
-      <header>{book?.title}</header>
+      <header>{book.title}</header>
       <div>{book.author}</div>
       <div>{book.genre}</div>
       <img src={book.image} alt={book.title}/>
