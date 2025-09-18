@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { ReaderViews } from "./ReaderViews";
-import { NonReaderViews } from "./NonReaderViews";
 
 export const ApplicationViews = () => {
   const [currentReader, setCurrentReader] = useState({});
