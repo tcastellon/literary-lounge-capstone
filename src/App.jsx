@@ -7,31 +7,29 @@ import { BookDetails } from "./components/books/BookDetails";
 import { ReaderList } from "./components/readers/ReaderList";
 import { ReaderNav } from "./components/nav/ReaderNav";
 import { ReaderDetails } from "./components/readers/ReaderDetails";
+import { Login } from "./components/auth/Login";
+import { Register } from "./components/auth/Register";
+import { Authorized } from "./views/Authorized";
+import { ApplicationViews } from "./views/ApplicationViews";
 
-function App() {
+export const App = () => {
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
       <Route
-        path="/"
+        path="*"
         element={
-          <>
-            <ReaderNav />
-            <Outlet />
-          </>
+          //Check if the user is authorized first
+          <Authorized>
+            {/* ApplicationViews is the CHILD component of Authorized. */}
+            <ApplicationViews />
+          </Authorized>
         }
-      >
-        <Route index element={<Home />} />
-        <Route path="booklist">
-          <Route index element={<BookList />} />
-          <Route path=":bookId" element={<BookDetails />} />
-        </Route>
-        <Route path="readerlist">
-          <Route index element={<ReaderList />} />
-          <Route path=":readerId" element={<ReaderDetails />} />
-        </Route>
-      </Route>
+      />
     </Routes>
   );
-}
 
-export default App;
+  // export default App;
+};
