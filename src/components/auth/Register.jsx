@@ -53,7 +53,7 @@ export const Register = (props) => {
             <input
               onChange={updateReader}
               type="text"
-              id="fullName"
+              id="name"
               className="form-control"
               placeholder="Enter your name"
               required
