@@ -5,6 +5,7 @@ import { BookList } from "../components/books/BookList";
 import { BookDetails } from "../components/books/BookDetails";
 import { ReaderList } from "../components/readers/ReaderList";
 import { ReaderDetails } from "../components/readers/ReaderDetails";
+import { AddBookForm } from "../components/forms/AddBookForm";
 
 export const ReaderViews = ({ currentReader }) => {
   return (
@@ -25,10 +26,10 @@ export const ReaderViews = ({ currentReader }) => {
         </Route>
         <Route path="readerlist">
           <Route index element={<ReaderList currentReader={currentReader} />} />
-          <Route
-            path=":readerId"
-            element={<ReaderDetails currentReader={currentReader} />}
-          />
+          <Route path=":readerId">
+            <Route index element={<ReaderDetails currentReader={currentReader} />} />
+            <Route path="addbook" element={<AddBookForm currentReader={currentReader} />} />
+          </Route>
         </Route>
       </Route>
     </Routes>
