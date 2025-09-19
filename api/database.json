@@ -53,6 +53,15 @@
       "genre": "Romance",
       "image": "https://m.media-amazon.com/images/I/712P0p5cXIL._UF1000,1000_QL80_.jpg",
       "description": "A witty tale of love, class, and first impressions in Regency England."
+    },
+    {
+      "creatorId": 5,
+      "title": "A Game of Thrones",
+      "author": "George R.R. Martin",
+      "genre": "Fantasy Fiction",
+      "image": "https://m.media-amazon.com/images/I/71Jzezm8CBL._UF1000,1000_QL80_.jpg",
+      "description": "The honorable Lord Eddard Stark forced into the treacherous political intrigue of King's Landing, where a looming struggle for the Iron Throne threatens to erupt into civil war.",
+      "id": 7
     }
   ],
   "readers": [
@@ -165,6 +174,12 @@
       "readerId": 5,
       "bookId": 1,
       "read": false
+    },
+    {
+      "readerId": 5,
+      "bookId": 7,
+      "read": false,
+      "id": 14
     }
   ]
 }
