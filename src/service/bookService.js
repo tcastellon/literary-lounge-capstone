@@ -23,3 +23,13 @@ export const addBookToLibrary = (newReaderBook) => {
     body: JSON.stringify(newReaderBook),
   }).then((res) => res.json());
 };
+
+export const addNewBook = (newBook) => {
+  return fetch(`http://localhost:8088/books`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newBook),
+  }).then((res) => res.json());
+};
