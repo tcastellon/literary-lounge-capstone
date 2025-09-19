@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getBooksByReaderId, getReaderById } from "../../service/readerService";
+import { getReaderById } from "../../service/readerService";
+import { getBooksByReaderId } from "../../service/bookService";
 
 export const Reader = ({ reader }) => {
   return (

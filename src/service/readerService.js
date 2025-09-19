@@ -10,12 +10,6 @@ export const getReaderById = (readerId) => {
   ).then((res) => res.json());
 };
 
-export const getBooksByReaderId = (readerId) => {
-  return fetch(
-    `http://localhost:8088/booksRead?readerId=${readerId}&_expand=book`
-  ).then((res) => res.json());
-};
-
 export const getReaderByEmail = (email) => {
   return fetch(`http://localhost:8088/readers?email=${email}`).then((res) =>
     res.json()

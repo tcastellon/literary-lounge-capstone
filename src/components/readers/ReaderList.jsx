@@ -7,8 +7,8 @@ export const ReaderList = () => {
   const [readers, setReaders] = useState([]);
 
   useEffect(() => {
-    getAllReaders().then((readers) => {
-      setReaders(readers);
+    getAllReaders().then(readersArray => {
+      setReaders(readersArray);
     });
   }, []);
 
