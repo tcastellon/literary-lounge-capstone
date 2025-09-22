@@ -1,0 +1,154 @@
+import { useState } from "react";
+import {
+  addBookToLibrary,
+  addNewBook,
+  getAllBooks,
+} from "../../service/bookService";
+
+export const AddBookForm = ({ currentReader }) => {
+  const [book, setBook] = useState({
+    title: "",
+    author: "",
+    genre: "",
+    image: "",
+    description: "",
+    read: false,
+  });
+
+  const handleAddNewBook = (event) => {
+    event.preventDefault();
+
+    const newBook = {
+      creatorId: currentReader.id,
+      title: book.title,
+      author: book.author,
+      genre: book.genre,
+      image: book.image,
+      description: book.description,
+    };
+    getAllBooks().then((books) => {
+      const duplicate = books.find(
+        (bookObj) =>
+          bookObj.title.toLowerCase() === newBook.title.toLowerCase() &&
+          bookObj.author.toLowerCase() === newBook.author.toLowerCase()
+      );
+      if (duplicate) {
+        window.alert("Book already exists!");
+      } else {
+        addNewBook(newBook).then((addedBook) => {
+          const newReaderBook = {
+            readerId: currentReader.id,
+            bookId: addedBook.id,
+            read: book.read,
+          };
+          addBookToLibrary(newReaderBook).then(() => {
+            setBook({
+              title: "",
+              author: "",
+              genre: "",
+              description: "",
+              image: "",
+              read: false,
+            });
+          });
+        });
+      }
+    });
+  };
+
+  return (
+    <form>
+      <h2>New Book</h2>
+      <fieldset>
+        <div>
+          <label>Book Title: </label>
+          <input
+            type="text"
+            placeholder="Book Title"
+            onChange={(event) => {
+              const bookCopy = { ...book };
+              bookCopy.title = event.target.value;
+              setBook(bookCopy);
+            }}
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label>Author: </label>
+          <input
+            type="text"
+            placeholder="Author"
+            onChange={(event) => {
+              const bookCopy = { ...book };
+              bookCopy.author = event.target.value;
+              setBook(bookCopy);
+            }}
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label>Genre: </label>
+          <input
+            type="text"
+            placeholder="Genre"
+            onChange={(event) => {
+              const bookCopy = { ...book };
+              bookCopy.genre = event.target.value;
+              setBook(bookCopy);
+            }}
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label>Image Link: </label>
+          <input
+            type="text"
+            placeholder="Image URL"
+            onChange={(event) => {
+              const bookCopy = { ...book };
+              bookCopy.image = event.target.value;
+              setBook(bookCopy);
+            }}
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label>Brief Description: </label>
+          <input
+            type="text"
+            placeholder="Brief description about the book"
+            onChange={(event) => {
+              const bookCopy = { ...book };
+              bookCopy.description = event.target.value;
+              setBook(bookCopy);
+            }}
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label>
+            Read Book?
+            <input
+              type="checkbox"
+              onChange={(event) => {
+                const bookCopy = { ...book };
+                bookCopy.read = event.target.checked;
+                setBook(bookCopy);
+              }}
+            />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <button onClick={handleAddNewBook}>Add Book</button>
+        </div>
+      </fieldset>
+    </form>
+  );
+};
