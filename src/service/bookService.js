@@ -33,3 +33,12 @@ export const addNewBook = (newBook) => {
     body: JSON.stringify(newBook),
   }).then((res) => res.json());
 };
+
+export const deleteBook = (bookId) => {
+  return fetch(
+    `http://localhost:8088/booksRead/${bookId}`,
+    {
+      method: "DELETE",
+    }
+  );
+};
