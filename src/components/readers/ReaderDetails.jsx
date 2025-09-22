@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getReaderById } from "../../service/readerService";
-import { getBooksByReaderId } from "../../service/bookService";
+import { deleteBook, getBooksByReaderId } from "../../service/bookService";
 
 export const Reader = ({ reader }) => {
   return (
@@ -36,6 +36,14 @@ export const ReaderDetails = ({ currentReader }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleDelete = (bookId) => {
+    deleteBook(bookId).then(() => {
+      getBooksByReaderId(readerId).then((booksArray) => {
+        setBooks(booksArray);
+      });
+    });
+  };
+
   return (
     <>
       <div>
@@ -64,10 +72,17 @@ export const ReaderDetails = ({ currentReader }) => {
               <div>{book.book.description}</div>
               <div>Completed? {book.read ? <p>Yes</p> : <p>No</p>}</div>
               <span>
-                {currentReader.id === book.book.creatorId && currentReader.id === reader.id && (
-                  <button>Edit</button>
+                {currentReader.id === book.book.creatorId &&
+                  currentReader.id === reader.id && <button>Edit</button>}
+                {currentReader.id === reader.id && (
+                  <button
+                    onClick={() => {
+                      handleDelete(book.id);
+                    }}
+                  >
+                    Delete
+                  </button>
                 )}
-                {currentReader.id === reader.id && <button>Delete</button>}
               </span>
             </div>
           );
