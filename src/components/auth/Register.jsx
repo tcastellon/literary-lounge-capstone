@@ -4,8 +4,9 @@ import { getReaderByEmail, createReader } from "../../service/readerService";
 
 export const Register = (props) => {
   const [reader, setReader] = useState({
-    email: "",
     name: "",
+    email: "",
+    narrative: "",
   });
   let navigate = useNavigate();
 
@@ -69,6 +70,18 @@ export const Register = (props) => {
               id="email"
               className="form-control"
               placeholder="Email address"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <input
+              onChange={updateReader}
+              type="text"
+              id="narrative"
+              className="form-control"
+              placeholder="Brief Narrative"
               required
             />
           </div>

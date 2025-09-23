@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getReaderByEmail } from "../../service/readerService";
 
 export const Login = () => {
-  const [email, set] = useState("Enter Email");
+  const [email, set] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
