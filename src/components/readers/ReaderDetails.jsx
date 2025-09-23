@@ -55,13 +55,15 @@ export const ReaderDetails = ({ currentReader }) => {
       </div>
       <div>
         <h1>Library</h1>
-        <button
-          onClick={() => {
-            navigate("addbook");
-          }}
-        >
-          Add Book
-        </button>
+        {currentReader.id === reader.id && (
+          <button
+            onClick={() => {
+              navigate("addbook");
+            }}
+          >
+            Add Book
+          </button>
+        )}
         {books.map((book) => {
           return (
             <div key={book.book.id}>
@@ -72,8 +74,15 @@ export const ReaderDetails = ({ currentReader }) => {
               <div>{book.book.description}</div>
               <div>Completed? {book.read ? <p>Yes</p> : <p>No</p>}</div>
               <span>
-                {currentReader.id === book.book.creatorId &&
-                  currentReader.id === reader.id && <button>Edit</button>}
+                {currentReader.id === reader.id && (
+                  <button
+                    onClick={() => {
+                      navigate(`editbook/${book.book.id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
+                )}
                 {currentReader.id === reader.id && (
                   <button
                     onClick={() => {
