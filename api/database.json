@@ -55,13 +55,130 @@
       "description": "A witty tale of love, class, and first impressions in Regency England."
     },
     {
+      "id": 7,
       "creatorId": 5,
       "title": "A Game of Thrones",
       "author": "George R.R. Martin",
       "genre": "Fantasy Fiction",
       "image": "https://m.media-amazon.com/images/I/71Jzezm8CBL._UF1000,1000_QL80_.jpg",
-      "description": "The honorable Lord Eddard Stark forced into the treacherous political intrigue of King's Landing, where a looming struggle for the Iron Throne threatens to erupt into civil war.",
-      "id": 7
+      "description": "The honorable Lord Eddard Stark forced into the treacherous political intrigue of King's Landing, where a looming struggle for the Iron Throne threatens to erupt into civil war."
+    },
+    {
+      "id": 8,
+      "creatorId": 3,
+      "title": "The Shining",
+      "author": "Stephen King",
+      "genre": "Horror",
+      "image": "https://m.media-amazon.com/images/I/91U7HNa2NQL._UF1000,1000_QL80_.jpg",
+      "description": "A writer's descent into madness while isolated in a haunted hotel during winter."
+    },
+    {
+      "id": 9,
+      "creatorId": 4,
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "genre": "Science Fiction",
+      "image": "https://m.media-amazon.com/images/I/810W+zAp2DL._UF1000,1000_QL80_.jpg",
+      "description": "An astronaut must survive alone on Mars using science and ingenuity."
+    },
+    {
+      "id": 10,
+      "creatorId": 5,
+      "title": "The Girl with the Dragon Tattoo",
+      "author": "Stieg Larsson",
+      "genre": "Mystery",
+      "image": "https://m.media-amazon.com/images/I/81ErH6RdLpL._UF1000,1000_QL80_.jpg",
+      "description": "A journalist and hacker uncover dark family secrets in Sweden."
+    },
+    {
+      "id": 11,
+      "creatorId": 1,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "image": "https://m.media-amazon.com/images/I/91wKDODkgWL._UF1000,1000_QL80_.jpg",
+      "description": "A young wizard discovers his magical heritage and attends Hogwarts School."
+    },
+    {
+      "id": 12,
+      "creatorId": 2,
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "genre": "Young Adult",
+      "image": "https://m.media-amazon.com/images/I/71un2hI4mcL._UF1000,1000_QL80_.jpg",
+      "description": "A girl volunteers to fight in a televised death match to save her sister."
+    },
+    {
+      "id": 13,
+      "creatorId": 6,
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "genre": "Thriller",
+      "image": "https://m.media-amazon.com/images/I/815WORuYMML._UF1000,1000_QL80_.jpg",
+      "description": "A symbologist races to solve ancient puzzles and uncover religious secrets."
+    },
+    {
+      "id": 14,
+      "creatorId": 3,
+      "title": "The Handmaid's Tale",
+      "author": "Margaret Atwood",
+      "genre": "Dystopian Fiction",
+      "image": "https://m.media-amazon.com/images/I/61su39k8NUL._UF1000,1000_QL80_.jpg",
+      "description": "A woman's struggle for survival in a totalitarian society where fertility is controlled."
+    },
+    {
+      "id": 15,
+      "creatorId": 4,
+      "title": "Where the Crawdads Sing",
+      "author": "Delia Owens",
+      "genre": "Literary Fiction",
+      "image": "https://m.media-amazon.com/images/I/81F0NTrPdCL._UF1000,1000_QL80_.jpg",
+      "description": "A coming-of-age murder mystery set in the marshlands of North Carolina."
+    },
+    {
+      "id": 16,
+      "creatorId": 7,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Philosophical Fiction",
+      "image": "https://m.media-amazon.com/images/I/71aFt4+OTOL._UF1000,1000_QL80_.jpg",
+      "description": "A young shepherd's journey to find treasure leads to self-discovery."
+    },
+    {
+      "id": 17,
+      "creatorId": 1,
+      "title": "It",
+      "author": "Stephen King",
+      "genre": "Horror",
+      "image": "https://m.media-amazon.com/images/I/71I9hVz4IKL._UF1000,1000_QL80_.jpg",
+      "description": "Seven friends face their childhood fears when an evil entity returns to their hometown."
+    },
+    {
+      "id": 18,
+      "creatorId": 8,
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "genre": "Psychological Thriller",
+      "image": "https://m.media-amazon.com/images/I/91lslnZ-btL._UF1000,1000_QL80_.jpg",
+      "description": "A psychotherapist becomes obsessed with treating a woman who refuses to speak."
+    },
+    {
+      "id": 19,
+      "creatorId": 2,
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": "Memoir",
+      "image": "https://m.media-amazon.com/images/I/71-4MkLN5jL._UF1000,1000_QL80_.jpg",
+      "description": "A woman's quest for knowledge despite being raised in an abusive, isolated family."
+    },
+    {
+      "id": 20,
+      "creatorId": 5,
+      "title": "The Seven Husbands of Evelyn Hugo",
+      "author": "Taylor Jenkins Reid",
+      "genre": "Historical Fiction",
+      "image": "https://m.media-amazon.com/images/I/81PkmvwdbhL._UF1000,1000_QL80_.jpg",
+      "description": "A reclusive Hollywood icon reveals her life's secrets to an unknown journalist."
     }
   ],
   "readers": [
