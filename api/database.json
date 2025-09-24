@@ -230,7 +230,7 @@
       "id": 3,
       "readerId": 1,
       "bookId": 2,
-      "read": false
+      "read": true
     },
     {
       "id": 4,
@@ -266,7 +266,7 @@
       "id": 9,
       "readerId": 3,
       "bookId": 1,
-      "read": false
+      "read": true
     },
     {
       "id": 10,
@@ -290,13 +290,49 @@
       "id": 13,
       "readerId": 5,
       "bookId": 1,
-      "read": false
+      "read": true
     },
     {
+      "id": 14,
       "readerId": 5,
       "bookId": 7,
+      "read": true
+    },
+    {
+      "readerId": 1,
+      "bookId": 17,
       "read": false,
-      "id": 14
+      "id": 15
+    },
+    {
+      "id": 16,
+      "readerId": 1,
+      "bookId": 13,
+      "read": true
+    },
+    {
+      "id": 17,
+      "readerId": 3,
+      "bookId": 8,
+      "read": true
+    },
+    {
+      "id": 18,
+      "readerId": 3,
+      "bookId": 15,
+      "read": true
+    },
+    {
+      "id": 19,
+      "readerId": 3,
+      "bookId": 20,
+      "read": true
+    },
+    {
+      "readerId": 3,
+      "bookId": 11,
+      "read": false,
+      "id": 20
     }
   ]
 }
