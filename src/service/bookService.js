@@ -42,3 +42,23 @@ export const deleteBook = (bookId) => {
     }
   );
 };
+
+export const updateBook = (book) => {
+  return fetch(`http://localhost:8088/books/${book.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(book)
+  })
+}
+
+export const updateBookRead = (book) => {
+  return fetch(`http://localhost:8088/booksRead/${book.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(book)
+  })
+}

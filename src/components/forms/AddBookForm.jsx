@@ -4,6 +4,7 @@ import {
   addNewBook,
   getAllBooks,
 } from "../../service/bookService";
+import "./Forms.css"
 
 export const AddBookForm = ({ currentReader }) => {
   const [book, setBook] = useState({
@@ -57,98 +58,100 @@ export const AddBookForm = ({ currentReader }) => {
   };
 
   return (
-    <form>
-      <h2>New Book</h2>
-      <fieldset>
-        <div>
-          <label>Book Title: </label>
-          <input
-            type="text"
-            placeholder="Book Title"
-            onChange={(event) => {
-              const bookCopy = { ...book };
-              bookCopy.title = event.target.value;
-              setBook(bookCopy);
-            }}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div>
-          <label>Author: </label>
-          <input
-            type="text"
-            placeholder="Author"
-            onChange={(event) => {
-              const bookCopy = { ...book };
-              bookCopy.author = event.target.value;
-              setBook(bookCopy);
-            }}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div>
-          <label>Genre: </label>
-          <input
-            type="text"
-            placeholder="Genre"
-            onChange={(event) => {
-              const bookCopy = { ...book };
-              bookCopy.genre = event.target.value;
-              setBook(bookCopy);
-            }}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div>
-          <label>Image Link: </label>
-          <input
-            type="text"
-            placeholder="Image URL"
-            onChange={(event) => {
-              const bookCopy = { ...book };
-              bookCopy.image = event.target.value;
-              setBook(bookCopy);
-            }}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div>
-          <label>Brief Description: </label>
-          <input
-            type="text"
-            placeholder="Brief description about the book"
-            onChange={(event) => {
-              const bookCopy = { ...book };
-              bookCopy.description = event.target.value;
-              setBook(bookCopy);
-            }}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div>
-          <label>
-            Read Book?
+    <div className="form-container">
+      <form className="book-form">
+        <h2>New Book</h2>
+        <fieldset>
+          <div>
+            <label>Book Title: </label>
             <input
-              type="checkbox"
+              type="text"
+              placeholder="Book Title"
               onChange={(event) => {
                 const bookCopy = { ...book };
-                bookCopy.read = event.target.checked;
+                bookCopy.title = event.target.value;
                 setBook(bookCopy);
               }}
             />
-          </label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <div>
-          <button onClick={handleAddNewBook}>Add Book</button>
-        </div>
-      </fieldset>
-    </form>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label>Author: </label>
+            <input
+              type="text"
+              placeholder="Author"
+              onChange={(event) => {
+                const bookCopy = { ...book };
+                bookCopy.author = event.target.value;
+                setBook(bookCopy);
+              }}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label>Genre: </label>
+            <input
+              type="text"
+              placeholder="Genre"
+              onChange={(event) => {
+                const bookCopy = { ...book };
+                bookCopy.genre = event.target.value;
+                setBook(bookCopy);
+              }}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label>Image Link: </label>
+            <input
+              type="text"
+              placeholder="Image URL"
+              onChange={(event) => {
+                const bookCopy = { ...book };
+                bookCopy.image = event.target.value;
+                setBook(bookCopy);
+              }}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label>Brief Description: </label>
+            <input
+              type="text"
+              placeholder="Brief description about the book"
+              onChange={(event) => {
+                const bookCopy = { ...book };
+                bookCopy.description = event.target.value;
+                setBook(bookCopy);
+              }}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label>
+              Read Book?
+              <input
+                type="checkbox"
+                onChange={(event) => {
+                  const bookCopy = { ...book };
+                  bookCopy.read = event.target.checked;
+                  setBook(bookCopy);
+                }}
+              />
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <button className="form-btn" onClick={handleAddNewBook}>Add Book</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
   );
 };

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-// import "./Login.css"
+import "./Login.css"
 import { getReaderByEmail } from "../../service/readerService";
 
 export const Login = () => {
-  const [email, set] = useState("Enter Email");
+  const [email, set] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {

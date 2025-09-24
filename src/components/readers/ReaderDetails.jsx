@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getReaderById } from "../../service/readerService";
 import { deleteBook, getBooksByReaderId } from "../../service/bookService";
+import "./Reader.css";
 
 export const Reader = ({ reader }) => {
   return (
-    <section>
-      <header>{reader.name}</header>
-      <div>{reader.narrative}</div>
-      <div>
+    <>
+      <div className="reader-header">{reader.name}</div>
+      <div className="reader-narrative">{reader.narrative}</div>
+      <div className="reader-stats">
         # of books read:{" "}
         {reader.booksRead.filter((book) => book.read === true).length}
       </div>
-    </section>
+    </>
   );
 };
 
@@ -46,36 +47,58 @@ export const ReaderDetails = ({ currentReader }) => {
 
   return (
     <>
-      <div>
-        <h3>{reader.name}</h3>
-        <div>{reader.narrative}</div>
-        <div>
-          # of books read: {books.filter((book) => book.read === true).length}
+      <div className="reader-details-conatiner">
+        <div className="reader-info">
+          <h3>{reader.name}</h3>
+          <div className="reader-narrative">{reader.narrative}</div>
+          <div className="reader-stats">
+            # of books read: {books.filter((book) => book.read === true).length}
+          </div>
         </div>
       </div>
-      <div>
-        <h1>Library</h1>
-        <button
-          onClick={() => {
-            navigate("addbook");
-          }}
-        >
-          Add Book
-        </button>
+      <div className="library-section">
+        <div className="library-header">
+          <h1>Library</h1>
+          {currentReader.id === reader.id && (
+            <button
+              className="add-book-btn"
+              onClick={() => {
+                navigate("addbook");
+              }}
+            >
+              Add Book
+            </button>
+          )}
+        </div>
         {books.map((book) => {
           return (
-            <div key={book.book.id}>
+            <div className="book-item" key={book.book.id}>
               <h3>{book.book.title}</h3>
-              <div>{book.book.author}</div>
-              <div>{book.book.genre}</div>
-              <img src={book.book.image} alt={book.title} />
-              <div>{book.book.description}</div>
-              <div>Completed? {book.read ? <p>Yes</p> : <p>No</p>}</div>
-              <span>
-                {currentReader.id === book.book.creatorId &&
-                  currentReader.id === reader.id && <button>Edit</button>}
+              <div className="book-author">{book.book.author}</div>
+              <div className="book-genre">{book.book.genre}</div>
+              <img
+                src={book.book.image}
+                alt={book.title}
+                className="book-image"
+              />
+              <div className="book-description">{book.book.description}</div>
+              <div className="book-status">
+                Completed? {book.read ? <p>Yes</p> : <p>No</p>}
+              </div>
+              <div className="book-actions">
                 {currentReader.id === reader.id && (
                   <button
+                  className="edit-btn"
+                    onClick={() => {
+                      navigate(`editbook/${book.book.id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
+                )}
+                {currentReader.id === reader.id && (
+                  <button
+                  className="delete-btn"
                     onClick={() => {
                       handleDelete(book.id);
                     }}
@@ -83,7 +106,7 @@ export const ReaderDetails = ({ currentReader }) => {
                     Delete
                   </button>
                 )}
-              </span>
+              </div>
             </div>
           );
         })}
