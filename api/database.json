@@ -211,6 +211,24 @@
       "name": "Lisa Thompson",
       "email": "happyendings.lisa@hotmail.com",
       "narrative": "I'm a marketing manager and busy mom who loves romance novels and feel-good fiction. I read as a way to unwind after long days and enjoy stories with happy endings and strong character development."
+    },
+    {
+      "id": 6,
+      "name": "Rachel Martinez",
+      "email": "bookandcoffee.rachel@gmail.com",
+      "narrative": "I'm a freelance graphic designer who finds inspiration in historical fiction and memoirs. I love stories about strong women overcoming challenges and often sketch characters from the books I read."
+    },
+    {
+      "id": 7,
+      "name": "James Wilson",
+      "email": "philosobooks@protonmail.com",
+      "narrative": "I'm a philosophy professor who enjoys philosophical fiction and dystopian novels. I'm drawn to books that explore big ideas about society, morality, and what it means to be human."
+    },
+    {
+      "id": 8,
+      "name": "Ashley Chen",
+      "email": "thrillernight.ash@yahoo.com",
+      "narrative": "I'm a night shift nurse who loves psychological thrillers and horror novels. Reading intense, suspenseful stories helps me unwind after long shifts, and I have a particular weakness for unreliable narrators."
     }
   ],
   "booksRead": [
