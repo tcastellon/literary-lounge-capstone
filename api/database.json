@@ -351,6 +351,54 @@
       "bookId": 11,
       "read": false,
       "id": 20
+    },
+    {
+      "id": 21,
+      "readerId": 6,
+      "bookId": 2,
+      "read": true
+    },
+    {
+      "id": 22,
+      "readerId": 6,
+      "bookId": 4,
+      "read": true
+    },
+    {
+      "id": 23,
+      "readerId": 6,
+      "bookId": 8,
+      "read": true
+    },
+    {
+      "readerId": 7,
+      "bookId": 1,
+      "read": false,
+      "id": 24
+    },
+    {
+      "readerId": 7,
+      "bookId": 8,
+      "read": false,
+      "id": 25
+    },
+    {
+      "readerId": 7,
+      "bookId": 10,
+      "read": false,
+      "id": 26
+    },
+    {
+      "readerId": 7,
+      "bookId": 17,
+      "read": false,
+      "id": 27
+    },
+    {
+      "id": 28,
+      "readerId": 8,
+      "bookId": 9,
+      "read": true
     }
   ]
 }
