@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { addBookToLibrary, getBooksById, getBooksByReaderId } from "../../service/bookService";
+import {
+  addBookToLibrary,
+  getBooksById,
+  getBooksByReaderId,
+} from "../../service/bookService";
+import "./Book.css";
 
 export const Book = ({ book }) => {
   return (
-    <section>
-      <header>{book.title}</header>
-      <img src={book.image} alt={book.title} />
-    </section>
+    <div className="book-card">
+      <img src={book.image} alt={book.title} className="book-image" />
+      <h3 className="book-title">{book.title}</h3>
+    </div>
   );
 };
 
@@ -34,27 +39,34 @@ export const BookDetails = ({ currentReader }) => {
     const newReaderBook = {
       readerId: currentReader.id,
       bookId: book.id,
-      read: false
-    }
+      read: false,
+    };
     addBookToLibrary(newReaderBook).then((savedReaderBook) => {
-      setReaderBooks([...readerBooks, savedReaderBook])
-    })
-  }
+      setReaderBooks([...readerBooks, savedReaderBook]);
+    });
+  };
 
   return (
-    <>
-      <div>
-        <header>{book.title}</header>
-        <div>{book.author}</div>
-        <div>{book.genre}</div>
-        <img src={book.image} alt={book.title} />
-        <div>{book.description}</div>
-      </div>
-      <div>
-        {!readerBooks.some((readerBook) => readerBook.bookId === book.id) && (
-          <button onClick={() => handleAddToLibrary(book)}>Add to Library</button>
-        )}
-      </div>
-    </>
+    <div className="book-details-container">
+      <section className="book">
+        <div>
+          <header className="book-header">{book.title}</header>
+          <div className="book-author">{book.author}</div>
+          <div className="book-genre">{book.genre}</div>
+          <img src={book.image} alt={book.title} className="book-image" />
+          <div className="book-description">{book.description}</div>
+        </div>
+        <div>
+          {!readerBooks.some((readerBook) => readerBook.bookId === book.id) && (
+            <button
+              className="btn-primary"
+              onClick={() => handleAddToLibrary(book)}
+            >
+              Add to Library
+            </button>
+          )}
+        </div>
+      </section>
+    </div>
   );
 };

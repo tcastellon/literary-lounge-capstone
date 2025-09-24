@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getReaderByEmail, createReader } from "../../service/readerService";
+import "./Login.css"
 
 export const Register = (props) => {
   const [reader, setReader] = useState({
@@ -75,7 +76,7 @@ export const Register = (props) => {
           </div>
         </fieldset>
         <fieldset>
-          <div>
+          <div className="form-group">
             <input
               onChange={updateReader}
               type="text"

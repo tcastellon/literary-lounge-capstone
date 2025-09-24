@@ -1,8 +1,9 @@
 
 export const BookFilter = ({setShowReaderBooks}) => {
   return (
-    <div>
+    <div className="filter-bar">
       <button
+      className="filter-btn btn-primary"
         onClick={() => {
           setShowReaderBooks(true);
         }}
@@ -10,6 +11,7 @@ export const BookFilter = ({setShowReaderBooks}) => {
         My Books
       </button>
       <button
+      className="filter-btn btn-info"
         onClick={() => {
           setShowReaderBooks(false);
         }}
