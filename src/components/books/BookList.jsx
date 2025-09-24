@@ -4,6 +4,7 @@ import { Book } from "./BookDetails";
 import { Link } from "react-router-dom";
 import { BookFilter } from "./BookFilterBar";
 import { getBooksByReaderId } from "../../service/bookService";
+import "./Book.css"
 
 export const BookList = ({ currentReader }) => {
   const [books, setBooks] = useState([]);
@@ -28,17 +29,18 @@ export const BookList = ({ currentReader }) => {
   }, [showReaderBooks, currentReader, books]);
 
   return (
-    <div>
+    <div className="books-container">
       <h2>Books</h2>
       <BookFilter setShowReaderBooks={setShowReaderBooks} />
-
-      {filteredBooks.map((bookObj) => {
-        return (
-          <Link to={`/booklist/${bookObj.id}`} key={bookObj.id}>
-            <Book book={bookObj} key={bookObj.id} />
-          </Link>
-        );
-      })}
+      <div className="books">
+        {filteredBooks.map((bookObj) => {
+          return (
+            <Link to={`/booklist/${bookObj.id}`} key={bookObj.id}>
+              <Book book={bookObj} key={bookObj.id} />
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
