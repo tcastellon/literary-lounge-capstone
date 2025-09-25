@@ -59,16 +59,6 @@ export const ReaderDetails = ({ currentReader }) => {
       <div className="library-section">
         <div className="library-header">
           <h1>Library</h1>
-          {currentReader.id === reader.id && (
-            <button
-              className="add-book-btn"
-              onClick={() => {
-                navigate("addbook");
-              }}
-            >
-              Add Book
-            </button>
-          )}
         </div>
         {books.map((book) => {
           return (
@@ -83,17 +73,17 @@ export const ReaderDetails = ({ currentReader }) => {
               />
               <div className="book-description">{book.book.description}</div>
               <div className="book-status">
-                Completed? {book.read ? <p>Yes</p> : <p>No</p>}
+                Status: {book.read ? <p>Read</p> : <p>Unread</p>}
               </div>
               <div className="book-actions">
-                {currentReader.id === reader.id && (
+                {currentReader.id === reader.id && currentReader.id === book.book.creatorId && (
                   <button
                   className="edit-btn"
                     onClick={() => {
                       navigate(`editbook/${book.book.id}`);
                     }}
                   >
-                    Edit
+                    Edit Book
                   </button>
                 )}
                 {currentReader.id === reader.id && (
@@ -103,7 +93,7 @@ export const ReaderDetails = ({ currentReader }) => {
                       handleDelete(book.id);
                     }}
                   >
-                    Delete
+                    Remove
                   </button>
                 )}
               </div>
