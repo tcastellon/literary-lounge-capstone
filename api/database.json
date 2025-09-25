@@ -179,7 +179,57 @@
       "image": "https://m.media-amazon.com/images/I/81PkmvwdbhL._UF1000,1000_QL80_.jpg",
       "description": "A reclusive Hollywood icon reveals her life's secrets to an unknown journalist.",
       "id": 20
+    },
+    {
+      "id": 21,
+      "creatorId": 10,
+      "title": "Harry Potter",
+      "author": "J.K. Rowling",
+      "genre": "Historical Fiction",
+      "image": "asdfasdf",
+      "description": "a bad book"
     }
+  ],
+  "genres": [
+    { "id": 1, "name": "Classic Fiction" },
+    { "id": 2, "name": "Contemporary Fiction" },
+    { "id": 3, "name": "Literary Fiction" },
+    { "id": 4, "name": "Historical Fiction" },
+    { "id": 5, "name": "Science Fiction" },
+    { "id": 6, "name": "Fantasy" },
+    { "id": 7, "name": "Mystery" },
+    { "id": 8, "name": "Thriller" },
+    { "id": 9, "name": "Psychological Thriller" },
+    { "id": 10, "name": "Horror" },
+    { "id": 11, "name": "Romance" },
+    { "id": 12, "name": "Young Adult" },
+    { "id": 13, "name": "Dystopian Fiction" },
+    { "id": 14, "name": "Adventure" },
+    { "id": 15, "name": "Biography" },
+    { "id": 16, "name": "Memoir" },
+    { "id": 17, "name": "Self-Help" },
+    { "id": 18, "name": "Philosophy" },
+    { "id": 19, "name": "True Crime" },
+    { "id": 20, "name": "Health & Wellness" },
+    { "id": 21, "name": "Business" },
+    { "id": 22, "name": "History" },
+    { "id": 23, "name": "Travel" },
+    { "id": 24, "name": "Cooking" },
+    { "id": 25, "name": "Art & Design" },
+    { "id": 26, "name": "Poetry" },
+    { "id": 27, "name": "Drama" },
+    { "id": 28, "name": "Comedy" },
+    { "id": 29, "name": "Children's" },
+    { "id": 30, "name": "Religion & Spirituality" },
+    { "id": 31, "name": "Politics" },
+    { "id": 32, "name": "Economics" },
+    { "id": 33, "name": "Science & Nature" },
+    { "id": 34, "name": "Technology" },
+    { "id": 35, "name": "Education" },
+    { "id": 36, "name": "Parenting" },
+    { "id": 37, "name": "Sports & Recreation" },
+    { "id": 38, "name": "Music" },
+    { "id": 39, "name": "Photography" }
   ],
   "readers": [
     {
@@ -235,6 +285,12 @@
       "email": "dave@dave.dave",
       "narrative": "i am dave",
       "id": 9
+    },
+    {
+      "name": "dave",
+      "email": "dave1@dave.dave",
+      "narrative": "asdf",
+      "id": 10
     }
   ],
   "booksRead": [
@@ -411,6 +467,18 @@
       "bookId": 20,
       "read": false,
       "id": 29
+    },
+    {
+      "id": 30,
+      "readerId": 10,
+      "bookId": 15,
+      "read": true
+    },
+    {
+      "id": 31,
+      "readerId": 10,
+      "bookId": 21,
+      "read": false
     }
   ]
 }
