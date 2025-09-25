@@ -30,8 +30,20 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 400px;
+  height: auto;
+}
 
+.book label {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.book input[type="checkbox"] {
+  margin-left: 0.5rem;
+  transform: scale(1.2);
+  accent-color: #3498db;
 }
 
 .book-card:hover {
@@ -53,7 +65,8 @@
   font-weight: bold;
   font-size: 0.9rem;
   margin: 0;
-  overflow: hidden;
+  padding: 3px;
+  overflow: auto;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -149,6 +162,16 @@
   transform: translateY(-1px);
 }
 
+.btn-secondary {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #d68910;
+  transform: translateY(-1px);
+}
+
 .btn-info {
   background-color: #95a5a6;
   color: white;
@@ -159,8 +182,21 @@
   transform: translateY(-1px);
 }
 
-.filter-btn:active {
-  transform: translateY(0);
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-primary.active:hover,
+.btn-info.active:hover {
+  background-color: #229954; 
+}
+
+.filter-btn.active {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -168,31 +204,31 @@
   .book-details-container {
     padding: 1rem;
   }
-  
+
   .books {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
   }
-  
+
   .book {
     padding: 1.5rem;
   }
-  
+
   .book .book-image {
     width: 150px;
     height: 225px;
   }
-  
+
   .book-info:first-child {
     font-size: 1.5rem;
   }
-  
+
   .filter-bar {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     width: 100%;
     max-width: 200px;
