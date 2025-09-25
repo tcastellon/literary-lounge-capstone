@@ -22,17 +22,29 @@ export const ReaderViews = ({ currentReader }) => {
       >
         <Route index element={<Home />} />
         <Route path="booklist">
-          <Route index element={<BookList currentReader={currentReader}/>} />
-          <Route path=":bookId" element={<BookDetails currentReader={currentReader}/>} />
+          <Route index element={<BookList currentReader={currentReader} />} />
+          <Route
+            path=":bookId"
+            element={<BookDetails currentReader={currentReader} />}
+          />
         </Route>
         <Route path="readerlist">
           <Route index element={<ReaderList currentReader={currentReader} />} />
           <Route path=":readerId">
-            <Route index element={<ReaderDetails currentReader={currentReader} />} />
-            <Route path="addbook" element={<AddBookForm currentReader={currentReader} />} />
-            <Route path="editbook/:bookId" element={<EditBookForm currentReader={currentReader}/>}/>
+            <Route
+              index
+              element={<ReaderDetails currentReader={currentReader} />}
+            />
+            <Route
+              path="editbook/:bookId"
+              element={<EditBookForm currentReader={currentReader} />}
+            />
           </Route>
         </Route>
+        <Route
+          path="addbook"
+          element={<AddBookForm currentReader={currentReader} />}
+        />
       </Route>
     </Routes>
   );
