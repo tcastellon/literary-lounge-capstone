@@ -14,6 +14,10 @@ export const getBooksByReaderId = (readerId) => {
   ).then((res) => res.json());
 };
 
+export const getAllGenres = () => {
+  return fetch("http://localhost:8088/genres").then((res) => res.json());
+};
+
 export const addBookToLibrary = (newReaderBook) => {
   return fetch(`http://localhost:8088/booksRead`, {
     method: "POST",
@@ -35,30 +39,27 @@ export const addNewBook = (newBook) => {
 };
 
 export const deleteBook = (bookId) => {
-  return fetch(
-    `http://localhost:8088/booksRead/${bookId}`,
-    {
-      method: "DELETE",
-    }
-  );
+  return fetch(`http://localhost:8088/booksRead/${bookId}`, {
+    method: "DELETE",
+  });
 };
 
 export const updateBook = (book) => {
   return fetch(`http://localhost:8088/books/${book.id}`, {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(book)
-  })
-}
+    body: JSON.stringify(book),
+  });
+};
 
 export const updateBookRead = (book) => {
   return fetch(`http://localhost:8088/booksRead/${book.id}`, {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(book)
-  })
-}
+    body: JSON.stringify(book),
+  });
+};
