@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   addBookToLibrary,
   addNewBook,
   getAllBooks,
+  getAllGenres,
 } from "../../service/bookService";
 import "./Forms.css"
 
@@ -15,6 +16,13 @@ export const AddBookForm = ({ currentReader }) => {
     description: "",
     read: false,
   });
+  const [genres, setGenres] = useState([])
+
+  useEffect(() => {
+    getAllGenres().then(genreArray => {
+      setGenres(genreArray)
+    })
+  }, [])
 
   const handleAddNewBook = (event) => {
     event.preventDefault();
@@ -92,15 +100,21 @@ export const AddBookForm = ({ currentReader }) => {
         <fieldset>
           <div>
             <label>Genre: </label>
-            <input
-              type="text"
+            <select
               value={book.genre}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.genre = event.target.value;
                 setBook(bookCopy);
               }}
-            />
+            >
+              <option value="">Select a genre ...</option>
+              {genres.map(genre => (
+                <option key={genre.id} value={genre.name}>
+                  {genre.name}
+                </option>
+              ))}
+            </select>
           </div>
         </fieldset>
         <fieldset>
