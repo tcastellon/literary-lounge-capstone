@@ -172,13 +172,13 @@
       "description": "A woman's quest for knowledge despite being raised in an abusive, isolated family."
     },
     {
-      "id": 20,
       "creatorId": 5,
       "title": "The Seven Husbands of Evelyn Hugo",
       "author": "Taylor Jenkins Reid",
       "genre": "Historical Fiction",
       "image": "https://m.media-amazon.com/images/I/81PkmvwdbhL._UF1000,1000_QL80_.jpg",
-      "description": "A reclusive Hollywood icon reveals her life's secrets to an unknown journalist."
+      "description": "A reclusive Hollywood icon reveals her life's secrets to an unknown journalist.",
+      "id": 20
     }
   ],
   "readers": [
@@ -405,6 +405,12 @@
       "readerId": 8,
       "bookId": 9,
       "read": true
+    },
+    {
+      "readerId": 5,
+      "bookId": 20,
+      "read": false,
+      "id": 29
     }
   ]
 }
