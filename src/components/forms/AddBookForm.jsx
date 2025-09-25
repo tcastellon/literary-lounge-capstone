@@ -66,7 +66,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Book Title: </label>
             <input
               type="text"
-              placeholder="Book Title"
+              value={book.title}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.title = event.target.value;
@@ -80,7 +80,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Author: </label>
             <input
               type="text"
-              placeholder="Author"
+              value={book.author}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.author = event.target.value;
@@ -94,7 +94,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Genre: </label>
             <input
               type="text"
-              placeholder="Genre"
+              value={book.genre}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.genre = event.target.value;
@@ -108,7 +108,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Image Link: </label>
             <input
               type="text"
-              placeholder="Image URL"
+              value={book.image}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.image = event.target.value;
@@ -122,28 +122,13 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Brief Description: </label>
             <input
               type="text"
-              placeholder="Brief description about the book"
+              value={book.description}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.description = event.target.value;
                 setBook(bookCopy);
               }}
             />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div>
-            <label>
-              Read Book?
-              <input
-                type="checkbox"
-                onChange={(event) => {
-                  const bookCopy = { ...book };
-                  bookCopy.read = event.target.checked;
-                  setBook(bookCopy);
-                }}
-              />
-            </label>
           </div>
         </fieldset>
         <fieldset>
