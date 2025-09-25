@@ -1,9 +1,10 @@
-
-export const BookFilter = ({setShowReaderBooks}) => {
+export const BookFilter = ({ setShowReaderBooks, showReaderBooks }) => {
   return (
     <div className="filter-bar">
       <button
-      className="filter-btn btn-primary"
+        className={`filter-btn ${
+          showReaderBooks ? "btn-primary active" : "btn-primary"
+        }`}
         onClick={() => {
           setShowReaderBooks(true);
         }}
@@ -11,7 +12,9 @@ export const BookFilter = ({setShowReaderBooks}) => {
         My Books
       </button>
       <button
-      className="filter-btn btn-info"
+        className={`filter-btn ${
+          !showReaderBooks ? "btn-info active" : "btn-info"
+        }`}
         onClick={() => {
           setShowReaderBooks(false);
         }}
