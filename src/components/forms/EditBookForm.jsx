@@ -3,14 +3,22 @@ import {
   getBooksByReaderId,
   updateBook,
   updateBookRead,
+  getAllGenres,
 } from "../../service/bookService";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Forms.css";
 
 export const EditBookForm = ({ currentReader }) => {
   const [book, setBook] = useState({});
+  const [genres, setGenres] = useState([]);
   const { bookId } = useParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    getAllGenres().then((genreArray) => {
+      setGenres(genreArray);
+    });
+  }, []);
 
   useEffect(() => {
     getBooksByReaderId(currentReader.id).then((booksArray) => {
@@ -78,15 +86,21 @@ export const EditBookForm = ({ currentReader }) => {
         <fieldset>
           <div>
             <label>Genre: </label>
-            <input
-              type="text"
+            <select
               value={book.book?.genre || ""}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.book.genre = event.target.value;
                 setBook(bookCopy);
               }}
-            />
+            >
+              <option value="">Select a genre ...</option>
+              {genres.map((genre) => (
+                <option key={genre.id} value={genre.name}>
+                  {genre.name}
+                </option>
+              ))}
+            </select>
           </div>
         </fieldset>
         <fieldset>
