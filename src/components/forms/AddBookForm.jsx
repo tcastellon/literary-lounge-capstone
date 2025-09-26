@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   addBookToLibrary,
   addNewBook,
   getAllBooks,
+  getAllGenres,
 } from "../../service/bookService";
 import "./Forms.css"
 
@@ -15,6 +16,13 @@ export const AddBookForm = ({ currentReader }) => {
     description: "",
     read: false,
   });
+  const [genres, setGenres] = useState([])
+
+  useEffect(() => {
+    getAllGenres().then(genreArray => {
+      setGenres(genreArray)
+    })
+  }, [])
 
   const handleAddNewBook = (event) => {
     event.preventDefault();
@@ -66,7 +74,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Book Title: </label>
             <input
               type="text"
-              placeholder="Book Title"
+              value={book.title}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.title = event.target.value;
@@ -80,7 +88,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Author: </label>
             <input
               type="text"
-              placeholder="Author"
+              value={book.author}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.author = event.target.value;
@@ -92,15 +100,21 @@ export const AddBookForm = ({ currentReader }) => {
         <fieldset>
           <div>
             <label>Genre: </label>
-            <input
-              type="text"
-              placeholder="Genre"
+            <select
+              value={book.genre}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.genre = event.target.value;
                 setBook(bookCopy);
               }}
-            />
+            >
+              <option value="">Select a genre ...</option>
+              {genres.map(genre => (
+                <option key={genre.id} value={genre.name}>
+                  {genre.name}
+                </option>
+              ))}
+            </select>
           </div>
         </fieldset>
         <fieldset>
@@ -108,7 +122,7 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Image Link: </label>
             <input
               type="text"
-              placeholder="Image URL"
+              value={book.image}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.image = event.target.value;
@@ -122,28 +136,13 @@ export const AddBookForm = ({ currentReader }) => {
             <label>Brief Description: </label>
             <input
               type="text"
-              placeholder="Brief description about the book"
+              value={book.description}
               onChange={(event) => {
                 const bookCopy = { ...book };
                 bookCopy.description = event.target.value;
                 setBook(bookCopy);
               }}
             />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div>
-            <label>
-              Read Book?
-              <input
-                type="checkbox"
-                onChange={(event) => {
-                  const bookCopy = { ...book };
-                  bookCopy.read = event.target.checked;
-                  setBook(bookCopy);
-                }}
-              />
-            </label>
           </div>
         </fieldset>
         <fieldset>
