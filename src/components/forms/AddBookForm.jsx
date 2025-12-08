@@ -43,7 +43,7 @@ export const AddBookForm = ({ currentReader }) => {
       );
       if (duplicate) {
         window.alert("Book already exists!");
-      } else {
+      } else if (newBook.title && newBook.author && newBook.genre && newBook.image && newBook.description) {
         addNewBook(newBook).then((addedBook) => {
           const newReaderBook = {
             readerId: currentReader.id,
@@ -61,13 +61,15 @@ export const AddBookForm = ({ currentReader }) => {
             });
           });
         });
+      } else {
+        window.alert("Please fill out all fields!")
       }
     });
   };
 
   return (
     <div className="form-container">
-      <form className="book-form">
+      <form className="book-form" name="addbook">
         <h2>New Book</h2>
         <fieldset>
           <div>
