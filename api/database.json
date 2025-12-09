@@ -181,13 +181,13 @@
       "id": 20
     },
     {
-      "id": 21,
-      "creatorId": 10,
-      "title": "Harry Potter",
-      "author": "J.K. Rowling",
-      "genre": "Science Fiction",
-      "image": "asdfasdf",
-      "description": "a bad book"
+      "creatorId": 1,
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "genre": "Historical Fiction",
+      "image": "google.com",
+      "description": "The Kite Runner follows Amir, a wealthy boy from Kabul, Afghanistan, who betrays his servant's son Hassan during a traumatic incident in their childhood, then spends decades grappling with guilt over his cowardice. Years later, after fleeing to America during the Soviet invasion, Amir returns to Taliban-controlled Afghanistan to rescue Hassan's son and seek redemption for his past mistakes.",
+      "id": 21
     }
   ],
   "genres": [
@@ -396,27 +396,9 @@
       "name": "Ashley Chen",
       "email": "thrillernight.ash@yahoo.com",
       "narrative": "I'm a night shift nurse who loves psychological thrillers and horror novels. Reading intense, suspenseful stories helps me unwind after long shifts, and I have a particular weakness for unreliable narrators."
-    },
-    {
-      "name": "dave",
-      "email": "dave@dave.dave",
-      "narrative": "i am dave",
-      "id": 9
-    },
-    {
-      "name": "dave",
-      "email": "dave1@dave.dave",
-      "narrative": "asdf",
-      "id": 10
     }
   ],
   "booksRead": [
-    {
-      "id": 1,
-      "readerId": 1,
-      "bookId": 1,
-      "read": true
-    },
     {
       "id": 2,
       "readerId": 1,
@@ -587,15 +569,9 @@
     },
     {
       "id": 30,
-      "readerId": 10,
-      "bookId": 15,
-      "read": true
-    },
-    {
-      "id": 31,
-      "readerId": 10,
+      "readerId": 1,
       "bookId": 21,
-      "read": true
+      "read": false
     }
   ]
 }

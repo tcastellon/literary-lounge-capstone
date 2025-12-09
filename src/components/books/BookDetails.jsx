@@ -84,7 +84,7 @@ export const BookDetails = ({ currentReader }) => {
           )}
         </div>
 
-        <div>
+        <div className="btn-group">
           {!currentBookStatus && (
             <button
               className="btn-primary"
@@ -94,26 +94,25 @@ export const BookDetails = ({ currentReader }) => {
             </button>
           )}
 
-          {currentBookStatus && (
-            <div className="btn-group">
+          <div className="btn-group">
+            {currentBookStatus && (
               <button className="btn-primary" onClick={changeReadStatus}>
                 Mark as {currentBookStatus.read ? "Unread" : "Read"}
               </button>
-
-              {book.creatorId === currentReader.id && (
-                <button
-                  className="btn-secondary"
-                  onClick={() =>
-                    navigate(
-                      `/readerlist/${currentReader.id}/editbook/${book.id}`
-                    )
-                  }
-                >
-                  Edit Book
-                </button>
-              )}
-            </div>
-          )}
+            )}
+            {book.creatorId === currentReader.id && (
+              <button
+                className="btn-secondary"
+                onClick={() =>
+                  navigate(
+                    `/readerlist/${currentReader.id}/editbook/${book.id}`
+                  )
+                }
+              >
+                Edit Book
+              </button>
+            )}
+          </div>
         </div>
       </section>
     </div>
