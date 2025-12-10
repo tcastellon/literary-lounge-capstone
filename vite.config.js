@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/literary-lounge-capstone/',
   plugins: [react()],
+  publicDir: 'public',
 })
