@@ -396,6 +396,12 @@
       "name": "Ashley Chen",
       "email": "thrillernight.ash@yahoo.com",
       "narrative": "I'm a night shift nurse who loves psychological thrillers and horror novels. Reading intense, suspenseful stories helps me unwind after long shifts, and I have a particular weakness for unreliable narrators."
+    },
+    {
+      "id": 9,
+      "name": "Thomas Castellon",
+      "email": "thomas.castellon@gmail.com",
+      "narrative": "I like turtles."
     }
   ],
   "booksRead": [
